@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1>Word Reverse</h1>
+    <input type= "text" id="userInput" />
+    <input type= "button" id="enter" value="Reverse" />
+</div>
+
+<script>
+
+    document.getElementById("enter").onclick = function() {
+        var userInput = document.getElementById("userInput").value;
+        var backend = userInput.length - 1;
+        var newWord = "";
+        for(; backend >= 0 ; backend--){
+         newWord += userInput[backend];
+        }
+        document.getElementById("userInput").value = (newWord);
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var circle = function(r){
+        this.radius = r;
+    };
+    circle.prototype.area = function(){
+        return Math.PI * this.radius * this.radius;
+    }
+    var c = new circle(10);
+
+    for (var prop in c){
+        console.log(prop + "=" + circle[prop]);
+    }
+
+
+    /*
+    What is the value of c constructor?
+    c.radius = 10
+    c.area = 100pi
+
+    List the all the own properties of c.
+    radius = undefined
+    area = undefined
+    There were no properties found for c
+
+    List all the enumerable properties of c.
+    c does not have enumerable properties.
+
+     */
+</script>
+</body>
+</html>
